@@ -1,0 +1,19 @@
+Feature: NeuedaTestFeature1
+Scenario: Test: simple multiplication
+When I call service by path: "/rest/multiply" with values ["5", "9"], then result is "45"
+Scenario: Test: multiplying negatives
+When I call service by path: "/rest/multiply" with values ["-2.3", "-6.76"], then result is "15.548"
+Scenario: Test: simple division
+When I call service by path: "/rest/divide" with values ["5", "2"], then result is "2.5"
+Scenario: Test: division by negative number
+When I call service by path: "/rest/divide" with values ["22.36", "-5"], then result is "-4.47"
+Scenario: Test: division by zero
+When I call service by path: "/rest/divide" with values ["10", "0"], then result is "DIV/0"
+Scenario: Test: simple addition
+When I call service by path: "/rest/add" with values ["6", "8"], then result is "14"
+Scenario: Test: adding a negative number
+When I call service by path: "/rest/add" with values ["-5.34", "3.95"], then result is "-1.39"
+Scenario: Test: simple subtraction
+When I call service by path: "/rest/subtract" with values ["97", "58"], then result is "39"
+Scenario: Test: subtracting a negative number
+When I call service by path: "/rest/subtract" with values ["-34.12", "-55.7"], then result is "21.58"

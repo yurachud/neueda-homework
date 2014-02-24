@@ -1,0 +1,2 @@
+Scenario: $scenarioTitle
+When I call service by path: "$Path" with values ["$variableOne", "$variableTwo"], then result is "$result"

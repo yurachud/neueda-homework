@@ -1,2 +1,10 @@
-neueda-homework
-===============
+#neueda-homework
+================
+## Usage
+* Put all mindMap xml files in folder neueda-homework/mindMaps
+* To create and run tests use:
+> mvn verify -Pcukes
+* To create tests use:
+> mvn generate-test-sources -Pcukes
+* To run tests use:
+> mvn verify -PrunCukes
