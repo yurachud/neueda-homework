@@ -8,7 +8,7 @@ class MindMapParserTest extends Specification {
         def feature = MindMapParser.parse(loadMindMap())
 
         then:
-        feature.featureName == 'Calculator tests'
+        feature.featureName == 'NeuedaTestFeature'
         feature.scenarios.size() == 9
     }
 
