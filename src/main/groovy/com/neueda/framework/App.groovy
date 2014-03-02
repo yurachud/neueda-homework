@@ -4,7 +4,6 @@ import com.neueda.framework.feature.FeatureFactory
 import com.neueda.framework.feature.MindMapParser
 
 import static com.neueda.framework.feature.FeatureFactory.getFeaturePath
-import static groovy.io.FileType.FILES
 
 class App {
 
@@ -29,7 +28,7 @@ class App {
     }
 
     private static cleanFeatureFolder() {
-        new File(featurePath).eachFileRecurse(FILES) { it.delete() }
+        new File(featurePath).eachFileMatch(~/.*\.feature/) { it.delete() }
     }
 
 }
