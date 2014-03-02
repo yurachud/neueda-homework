@@ -1,6 +1,6 @@
 #neueda-homework
 ================
-## Usage
+### Usage
 * Put all mindMap files in folder neueda-homework/mindMaps
 * To create and run tests use:
 > mvn verify -Pcukes
