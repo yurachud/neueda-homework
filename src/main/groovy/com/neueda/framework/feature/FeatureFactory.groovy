@@ -6,7 +6,6 @@ import groovy.text.SimpleTemplateEngine
 
 class FeatureFactory {
     static final featurePath = 'src/cukes/resources/'
-    final featureExtension = '.feature'
     final engine = new SimpleTemplateEngine()
     final scenarioTemplate
     final List<Feature> features
@@ -41,13 +40,13 @@ class FeatureFactory {
 
     private createFeatureFile(String featureName) {
         def featureFile = new File(createFeatureName(featureName))
-        featureFile.text = 'Feature: ' + featureName + featureCountWithSameName + '\n'
+        featureFile.text = "${'Feature: '}${featureName}${featureCountWithSameName}${'\n'}"
         increaseCounter()
         featureFile
     }
 
     private String createFeatureName(String featureName) {
-        featurePath + featureName.replace(' ', '') + featureCountWithSameName + featureExtension
+        "${featurePath}${featureName.replace(' ', '')}${featureCountWithSameName}${'.feature'}"
     }
 
     private dropCounter() {

@@ -17,15 +17,15 @@ class App {
     }
 
     private static createFeatures() {
-        new FeatureFactory(featureDefinitions()).create()
+        new FeatureFactory(features()).create()
     }
 
-    private static featureDefinitions() {
-        def featureDefinitions = []
+    private static features() {
+        def features = []
         mindMaps().eachFile {
-            featureDefinitions << MindMapParser.parse(it.text)
+            features << MindMapParser.parse(it.text)
         }
-        featureDefinitions
+        features
     }
 
     private static cleanFeatureFolder() {
